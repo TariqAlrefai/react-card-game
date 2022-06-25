@@ -12,7 +12,7 @@ export const recieveCardsTests = async () => {
   let gotNotifyTurnResponse: boolean;
 
   beforeAll(async () => {
-    mockPlayersIns = await signInWithoutDataListener(6);
+    mockPlayersIns = await signInWithoutDataListener(4);
   });
 
   afterAll(() => {
@@ -34,7 +34,7 @@ export const recieveCardsTests = async () => {
   test(
     "Create a game and check whether all players recieved cards or not",
     async () => {
-      mockPlayersIns = await signInWithDataListener(6, onDataSocketListener);
+      mockPlayersIns = await signInWithDataListener(4, onDataSocketListener);
 
       // Needs to sleep here for some millisecond to capture the recieveCard
       // response properly.

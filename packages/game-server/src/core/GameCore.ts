@@ -330,7 +330,7 @@ export class GameCore {
 
     if (playerId.length > 10) {
       throw new Error(
-        "Please chooose an user id with length lessthan or equal to 10 characters."
+        "Please choose an user id with length lessthan or equal to 10 characters."
       );
     }
 

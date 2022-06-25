@@ -34,20 +34,20 @@ class Rules extends React.Component<IProps, {}> {
         <Segment attached={true}>
           <ul>
             <h5>Sign-in</h5>
-            <li>Sign in with any name to play</li>
+            <li>Sign in with your account</li>
             <li>
-              Afer successfully signed in the player will be added to the game
+              Afer successfully signed in, the players will be added to the game
               pool and message will be notified to them.
             </li>
             <li>
               Once
               <u>
                 <i>
-                  <b> 6 players</b>
+                  <b> 4 players</b>
                 </i>
               </u>{" "}
-              joined in the game pool the game will start and will be notified.
-              Untill then you hav to wait.
+              joined in the game pool, the game will start and will be notified.
+              Untill then you have to wait.
             </li>
           </ul>
 
@@ -56,17 +56,29 @@ class Rules extends React.Component<IProps, {}> {
           <ul>
             <h5>Your turn</h5>
             <li>
-              The game grid contains two sections
+              The game grid contains five sections
               <b>
                 <i> your cards </i>
               </b>
-              and
+              ,
               <b>
                 <i> dropped cards.</i>
               </b>
+              ,
+              <b>
+                <i> playground </i>
+              </b>
+              ,
+              <b>
+                <i> your balls </i>
+              </b>
+              and
+              <b>
+                <i> other players' balls </i>
+              </b>
             </li>
             <li>
-              Each player will get eight cards. When your turn comes you need to
+              Each player will get four cards, last shiffel will be five. When your turn comes you need to
               select one card by clicking the card from
               <b>
                 <i> your cards.</i>
@@ -77,52 +89,26 @@ class Rules extends React.Component<IProps, {}> {
           <br />
 
           <ul>
-            <h5>Card Selection and penality</h5>
-            <li>
-              If there are no cards in the dropped cards section then you are
-              free to choose any card.
-            </li>
-            <li>
-              But if already some card(s) were present in the dropped cards
-              section then you should select a card of the same suit.
-            </li>
-            <li>We will see some examples to understand the penality system</li>
-            <br />
-            <i>
-              <u>Example :- Normal round</u>
-            </i>
-            <br />
-            <br />
-            player 1: H6 <br />
-            player 2: H1 <br />
-            player 3: Hk <br />
-            player 4: H3 <br />
-            player 5: H4 <br />
-            player 6: H8 <br />
-            <br />
-            All players had the same suit in this round. Player one started and
-            the round over without any penality.
-            <br />
-            <br />
-            <i>
-              <u>Example :- Penality case 1</u>
-            </i>
-            <br />
-            <br />
-            player 1: C5 <br />
-            player 2: C9 <br />
-            player 3: Hk <br />
-            <br />
-            <br />
-            Now in this round the first two players had the same suit and third
-            player didn't had the same suit, so he dropped different suit. Now
-            this is a penality case. <br /> The calculation gies this way. In a
-            round who puts the highest number card of the same suit will get the
-            penality and strike starts from them. <br /> In this case player two
-            purs the highest number in "C" (clever 9). So he will penality
-            meaning all the cards C5, C9, HK will be added to his cards list.{" "}
-            <br />
-            And the strike will start from him.
+            <h5>Card Functionality</h5>
+            <li> Normal Cards: 2,3,6,7,8,9,10 are just moving the balls step forward according to thier value.</li>
+            <li> Card no. 4: moving the ball backword.</li>
+            <li> Card no. 5: moving any ball in playground 5 step forward (even other's ball).</li>
+            <li> King Card K: ONLY using this for placing new ball.</li>
+            <li> Queen Card Q: moving ball forward for 12 steps.</li>
+            <li> Jack Card J: Used to replace player ball with another ball (to get closer to winning area).</li>
+            <li> Ace Card A: Used to either place a ball or move 1 or 11.</li>
+          </ul>
+
+          <br />
+          <ul>
+            <h5>The Plaground</h5>
+
+            <li> Playground consists of 73 postions. </li>
+            <li> Each player has a base to place his ball in.</li>
+            <li> Each player has a 4 postions for winning.</li>
+            <li> Each player has 4 balls.</li>
+            <li> Players have to place all thier balls and move them to winning area.</li>
+
           </ul>
 
           <br />
@@ -131,8 +117,12 @@ class Rules extends React.Component<IProps, {}> {
             <h5>Winner</h5>
 
             <li>
-              The fisrt player who losses all his cards will be declared as a
-              winner.
+              Every player needs to move his ball among the playground
+              to enter the winning area.
+            </li>
+            <li>
+              The first player enter all his 4 balls into
+              winning area, will be declared as The Winner!.
             </li>
           </ul>
 
@@ -146,6 +136,9 @@ class Rules extends React.Component<IProps, {}> {
               disconnected form the game. This is a limitation which will be
               overcomed <br />
               in the upcoming releases.
+            </li>
+            <li>
+              Any player moves his ball to a taken postion by another ball, the other ball will be eliminated (new ball killed old one!)
             </li>
           </ul>
         </Segment>

@@ -8,7 +8,7 @@ import { SuccessResponse } from "@rcg/common";
  */
 export function createPlayers(
   numberOfPlayers,
-  onDataSocketListener: (data: SuccessResponse, cb: any) => any = () => {}
+  onDataSocketListener: (data: SuccessResponse, cb: any) => any = () => { }
 ): MockPlayer[] {
   let players: MockPlayer[] = [];
 
@@ -24,7 +24,7 @@ export function createPlayers(
  * @param playersCount The no of players needs to signin.
  */
 export async function signInWithoutDataListener(
-  playersCount: number = 6
+  playersCount: number = 4
 ): Promise<MockPlayer[]> {
   const players = createPlayers(playersCount);
 
@@ -49,7 +49,7 @@ export async function signInWithoutDataListener(
  * @param onDataSocketListener The callback needs to called on the "data" listener events.
  */
 export async function signInWithDataListener(
-  playersCount: number = 6,
+  playersCount: number = 4,
   onDataSocketListener: (data: SuccessResponse, cb: any) => any
 ): Promise<MockPlayer[]> {
   const players = createPlayers(playersCount, onDataSocketListener);
