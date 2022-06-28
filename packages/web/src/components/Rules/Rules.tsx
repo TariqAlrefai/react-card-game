@@ -137,9 +137,6 @@ class Rules extends React.Component<IProps, {}> {
               overcomed <br />
               in the upcoming releases.
             </li>
-            <li>
-              Any player moves his ball to a taken postion by another ball, the other ball will be eliminated (new ball killed old one!)
-            </li>
           </ul>
         </Segment>
       </div>

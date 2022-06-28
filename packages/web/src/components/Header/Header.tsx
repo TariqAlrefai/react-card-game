@@ -27,7 +27,7 @@ class Header extends React.Component<IProps, {}> {
     return (
       <Menu attached={true} size="small">
         <Menu.Item>
-          <h5>Jakaroo Game</h5>
+          <h5>React card game</h5>
         </Menu.Item>
 
         <Menu.Menu position="right">{this.renderMenus()}</Menu.Menu>
